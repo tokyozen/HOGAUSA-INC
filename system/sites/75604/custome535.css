@@ -1,0 +1,55 @@
+:root {
+    --ss-color-11155: #3853a4;
+    --ss-color-11156: #4169E1;
+    --ss-color-11155-dark: #1f3a8b;
+    --ss-color-11156-dark: #2850c8;
+}
+
+
+.site-container {
+    font-family: 'Roboto', sans-serif;
+}
+
+.primary-navigation,
+.location-quick-links {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.primary-navigation .page-listing li {
+  font-size: 18px;
+}
+
+.post--title,
+.post-item_list .item--title,
+.post-gallery .gallery-photo--title,
+.post-menu .item--name,
+.post-pricing_table .plan--title,
+.location-title,
+.footer-container .about-title,
+.social-icons__title {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.post-button {
+
+    border-style: none;
+
+  border-radius: 7px;
+
+    box-shadow: 0px 4px 12px 1.28px rgba(0, 0, 0, 0.3);
+
+}
+
+
+body {
+  background-color: var(--ss-color-11155);
+}
+
+body:before {
+    background-image: url(../../../../d14tal8bchn59o.cloudfront.net/F2qZhKBIKb4CEbTvAd1aggvKw67C7QjdXn_4qhubdek/w_1920/plain/https_/02f0a56ef46d93f03c90-22ac5f107621879d5667e0d7ed/sites/75604/photos/20485719/WhatsApp_Image_2024-03-13_at_03);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
