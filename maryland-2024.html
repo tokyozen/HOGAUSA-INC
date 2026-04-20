@@ -435,50 +435,56 @@
 
 
 <div class="post-container">
-  <article class="post post-video layout--left_video thumbnail-size--two_thirds text-alignment--top" id="post_video_md2024a" data-type="Video">
-    <div class="post-body">
-      <div class="content">
-        <div class="media">
-          <div class="video-player" style="position:relative;padding-bottom:75%;height:0;overflow:hidden;max-width:100%;">
-            <iframe src="https://drive.google.com/file/d/1ETOe_HwKpIZ9zXtuhFrXNzw1iTe_5yWX/preview" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="autoplay" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="copy">
-          <div class="post--title wysiwyg-text"><h2><strong><span class="font-size-m">Maryland 2024</span></strong></h2></div>
-          <div class="description wysiwyg-text"><span class="font-size-s">A celebration of cherished memories, enduring friendships, and the spirit of sisterhood.</span></div>
-        </div>
+  <style>
+    .md2024-videos-row {
+      display: flex;
+      gap: 24px;
+      padding: 30px 40px;
+      background: #ffffff;
+    }
+    .md2024-videos-row .video-col {
+      flex: 1;
+      min-width: 0;
+    }
+    .md2024-videos-row .video-col .video-player {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+    .md2024-videos-row .video-col .video-player iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+    .md2024-videos-row .video-col h2 {
+      margin: 12px 0 4px;
+      font-size: 1.1rem;
+    }
+    .md2024-videos-row .video-col p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 640px) {
+      .md2024-videos-row { flex-direction: column; }
+    }
+  </style>
+  <div class="md2024-videos-row">
+    <div class="video-col">
+      <div class="video-player">
+        <iframe src="https://drive.google.com/file/d/1ETOe_HwKpIZ9zXtuhFrXNzw1iTe_5yWX/preview" allow="autoplay" allowfullscreen></iframe>
       </div>
+      <h2><strong>Maryland 2024</strong></h2>
+      <p>A celebration of cherished memories, enduring friendships, and the spirit of sisterhood.</p>
     </div>
-    <style>
-      #post_video_md2024a {
-        --ss-post-vertical-spacing: 30px;
-        --ss-post-background-color: #ffffff;
-      }
-    </style>
-  </article>
-</div>
-<div class="post-container">
-  <article class="post post-video layout--left_video thumbnail-size--two_thirds text-alignment--top" id="post_video_md2024b" data-type="Video">
-    <div class="post-body">
-      <div class="content">
-        <div class="media">
-          <div class="video-player" style="position:relative;padding-bottom:75%;height:0;overflow:hidden;max-width:100%;">
-            <iframe src="https://drive.google.com/file/d/1eWoboysAqvmjHGXHEzbBQFieChCphm75/preview" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="autoplay" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="copy">
-          <div class="post--title wysiwyg-text"><h2><strong><span class="font-size-m">Maryland 2024</span></strong></h2></div>
-          
-        </div>
+    <div class="video-col">
+      <div class="video-player">
+        <iframe src="https://drive.google.com/file/d/1eWoboysAqvmjHGXHEzbBQFieChCphm75/preview" allow="autoplay" allowfullscreen></iframe>
       </div>
+      <h2><strong>Maryland 2024</strong></h2>
     </div>
-    <style>
-      #post_video_md2024b {
-        --ss-post-vertical-spacing: 30px;
-        --ss-post-background-color: #ffffff;
-      }
-    </style>
-  </article>
+  </div>
 </div>
 
 </div>
