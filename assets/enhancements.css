@@ -101,7 +101,7 @@ input[type="submit"].post-button:active {
 }
 
 .post-hero_image.animated {
-  opacity: 1 !important;
+  opacity: 3 !important;
 }
 
 /* ── Animated posts — start invisible ───────── */
