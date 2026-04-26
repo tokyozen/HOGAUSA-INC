@@ -424,53 +424,85 @@
 
 <div class="post-container">
   <style>
-    .md2024-videos-row {
+    .md2024-video-section {
       display: flex;
-      gap: 24px;
-      padding: 30px 40px;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 40px;
       background: #ffffff;
     }
-    .md2024-videos-row .video-col {
-      flex: 1;
+    .md2024-video-section .video-side {
+      flex: 3;
       min-width: 0;
     }
-    .md2024-videos-row .video-col .video-player {
+    .md2024-video-section .video-side .video-player {
       position: relative;
       padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
+      border-radius: 6px;
     }
-    .md2024-videos-row .video-col .video-player iframe {
+    .md2024-video-section .video-side .video-player iframe {
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       border: 0;
     }
-    .md2024-videos-row .video-col h2 {
-      margin: 12px 0 4px;
-      font-size: 1.1rem;
+    .md2024-video-section .desc-side {
+      flex: 2;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      padding-top: 8px;
     }
-    .md2024-videos-row .video-col p {
+    .md2024-video-section .desc-side p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #333333;
       margin: 0;
-      font-size: 0.9rem;
     }
-    @media (max-width: 640px) {
-      .md2024-videos-row { flex-direction: column; }
+    .md2024-view-more {
+      display: inline-block;
+      padding: 12px 28px;
+      background: var(--ss-color-11155, #3853a4);
+      color: #ffffff !important;
+      font-family: 'Mulish', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.2s ease, transform 0.2s ease;
+      align-self: flex-start;
+    }
+    .md2024-view-more:hover {
+      background: var(--ss-color-11156, #4169E1);
+      transform: translateY(-2px);
+    }
+    @media (max-width: 700px) {
+      .md2024-video-section {
+        flex-direction: column;
+        padding: 24px 20px;
+        gap: 24px;
+      }
+      .md2024-view-more {
+        align-self: stretch;
+        text-align: center;
+      }
     }
   </style>
-  <div class="md2024-videos-row">
-    <div class="video-col">
+  <div class="md2024-video-section">
+    <div class="video-side">
       <div class="video-player">
-        <iframe src="https://drive.google.com/file/d/1ETOe_HwKpIZ9zXtuhFrXNzw1iTe_5yWX/preview" allow="autoplay" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/aTF8dJVPq1Q" title="Maryland 2024 Reunion Cookout Dinner Dance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-      <h2><strong>Maryland 2024</strong></h2>
-      <p>A celebration of cherished memories, enduring friendships, and the spirit of sisterhood.</p>
     </div>
-    <div class="video-col">
-      <div class="video-player">
-        <iframe src="https://drive.google.com/file/d/1eWoboysAqvmjHGXHEzbBQFieChCphm75/preview" allow="autoplay" allowfullscreen></iframe>
-      </div>
-      <h2><strong>Maryland 2024</strong></h2>
+    <div class="desc-side">
+      <p>A heartfelt celebration of cherished memories, lifelong friendships, and the unbreakable spirit of sisterhood that has united us through the years, strengthening the bond we proudly share today.</p>
+      <a class="md2024-view-more" href="https://www.youtube.com/playlist?list=PLBISBxTgr2oSYz-GNwsSLLM-8tJ4RaFJM" target="_blank" rel="noopener noreferrer">View More</a>
     </div>
   </div>
 </div>
