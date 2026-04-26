@@ -2,6 +2,8 @@
    Harfordian Sisters — Visual Enhancements
    ============================================= */
 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&family=DM+Sans:wght@400;500&display=swap');
+
 /* Smooth scroll for all anchor links */
 html {
   scroll-behavior: smooth;
@@ -273,4 +275,236 @@ body::before {
   content: '';
   display: block;
   height: 0;
+}
+
+/* ── Reunion video section card ─────────────────
+   Forest green + gold palette, Cormorant Garamond display font.
+   Used on Philadelphia 2022, Texas 2023, Maryland 2024, Maryland 2025.
+   ─────────────────────────────────────────────── */
+.reunion-section {
+  --rs-bg: #FDFAF5;
+  --rs-card: #fff;
+  --rs-accent: #1B4332;
+  --rs-gold: #D4A843;
+  --rs-muted: #6b6b6b;
+  --rs-warm: #C4501A;
+  background: var(--rs-bg);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+  font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
+}
+.reunion-section *,
+.reunion-section *::before,
+.reunion-section *::after {
+  box-sizing: border-box;
+}
+.reunion-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 100%;
+  background:
+    radial-gradient(ellipse at 0% 50%, rgba(212,168,67,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 80%, rgba(27,67,50,0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+.reunion-section::after {
+  content: '';
+  position: absolute;
+  top: 40px; right: 40px;
+  width: 180px; height: 180px;
+  border: 1px solid rgba(212,168,67,0.15);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.reunion-section .rs-geo-diamond {
+  position: absolute;
+  bottom: 60px; left: 50px;
+  width: 100px; height: 100px;
+  border: 1px solid rgba(27,67,50,0.08);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+.reunion-section .rs-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
+}
+.reunion-section .rs-header {
+  text-align: center;
+  margin-bottom: 48px;
+  animation: reunionFadeUp 0.8s ease forwards;
+}
+.reunion-section .rs-overline {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--rs-gold);
+  margin-bottom: 16px;
+}
+.reunion-section .rs-overline::before,
+.reunion-section .rs-overline::after {
+  content: '';
+  width: 30px; height: 1px;
+  background: var(--rs-gold);
+}
+.reunion-section .rs-header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 46px;
+  font-weight: 400;
+  color: var(--rs-accent);
+  line-height: 1.15;
+  margin: 0;
+}
+.reunion-section .rs-header h2 em {
+  color: var(--rs-warm);
+  font-style: italic;
+}
+.reunion-section .rs-card {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  background: var(--rs-card);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.03);
+  animation: reunionFadeUp 0.8s 0.2s ease both;
+}
+.reunion-section .rs-video-side {
+  position: relative;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+.reunion-section .rs-video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.reunion-section .rs-video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+.reunion-section .rs-event-tag {
+  position: absolute;
+  top: 20px; left: 20px;
+  background: rgba(212,168,67,0.95);
+  color: #1a1410;
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 4px;
+  z-index: 2;
+}
+.reunion-section .rs-text-side {
+  padding: 50px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.reunion-section .rs-text-side::before {
+  content: '\201C';
+  position: absolute;
+  top: 20px; right: 30px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 120px;
+  color: rgba(212,168,67,0.08);
+  line-height: 1;
+  pointer-events: none;
+}
+.reunion-section .rs-text-side h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--rs-accent);
+  margin: 0 0 6px;
+  line-height: 1.25;
+}
+.reunion-section .rs-location {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  color: var(--rs-gold);
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.reunion-section .rs-location svg {
+  width: 14px; height: 14px;
+  fill: var(--rs-gold);
+  flex-shrink: 0;
+}
+.reunion-section .rs-dots {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+.reunion-section .rs-dots span {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--rs-gold);
+  opacity: 0.4;
+}
+.reunion-section .rs-dots span:nth-child(2) { opacity: 0.6; }
+.reunion-section .rs-dots span:nth-child(3) { opacity: 0.8; }
+.reunion-section .rs-text-side p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--rs-muted);
+  margin: 0 0 28px;
+}
+.reunion-section .rs-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 36px;
+  background: var(--rs-accent);
+  color: #fff !important;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.reunion-section .rs-btn:hover {
+  background: #15352a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(27,67,50,0.2);
+}
+.reunion-section .rs-btn svg {
+  width: 16px; height: 16px;
+  transition: transform 0.3s ease;
+}
+.reunion-section .rs-btn:hover svg { transform: translateX(3px); }
+
+@keyframes reunionFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 800px) {
+  .reunion-section { padding: 60px 0; }
+  .reunion-section .rs-inner { padding: 0 20px; }
+  .reunion-section .rs-card { grid-template-columns: 1fr; }
+  .reunion-section .rs-header h2 { font-size: 32px; }
+  .reunion-section .rs-text-side { padding: 32px 24px; }
+  .reunion-section .rs-btn { align-self: stretch; text-align: center; justify-content: center; }
 }
