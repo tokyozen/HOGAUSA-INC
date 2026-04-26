@@ -283,7 +283,7 @@ body::before {
    ─────────────────────────────────────────────── */
 .reunion-section {
   --rs-bg: #FDFAF5;
-  --rs-card: #fff;
+  --rs-card: #FDFAF5;
   --rs-accent: #1B4332;
   --rs-gold: #D4A843;
   --rs-muted: #6b6b6b;
