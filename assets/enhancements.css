@@ -7,9 +7,59 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ── Header tagline spacing ──────────────────── */
-.primary-header .branding h2 {
-  margin-top: 6px;
+/* ── Header branding: flex alignment + portrait-logo fix ──────────────
+   The main CSS uses inline-block + vertical-align:middle with line-height:0
+   on h1/h2. That works for landscape logos but breaks with a portrait logo.
+   Switching to flexbox gives reliable centering regardless of logo shape.
+   ─────────────────────────────────────────────────────────────────────── */
+
+/* 1. Flex container — vertically centers logo and headings */
+.primary-header.header-style-logo-text .branding {
+  display: flex !important;
+  align-items: center;
+  gap: 16px;
+}
+
+/* 2. Remove the old inline-block centering trick (not needed with flex) */
+.primary-header.header-style-logo-text .branding::before {
+  display: none !important;
+}
+
+/* 3. Logo: size by height (portrait-safe), auto width, no distortion */
+.primary-header.header-style-logo-text .branding .logo {
+  display: block !important;
+  flex-shrink: 0;
+  width: auto !important;
+  max-width: none !important;
+  margin-right: 0;
+  vertical-align: unset;
+}
+.primary-header.header-style-logo-text .branding .logo img {
+  display: block;
+  height: 76px;   /* slightly larger than the 70px header min-height */
+  width: auto;
+  max-width: none;
+}
+
+/* 4. Headings: restore proper line-heights (main CSS zeroes them) */
+.primary-header.header-style-logo-text .branding .headings {
+  display: block !important;
+  vertical-align: unset;
+}
+.primary-header.header-style-logo-text .branding h1,
+.primary-header.header-style-logo-text .branding h2 {
+  line-height: 1.15 !important;
+  margin: 0 !important;
+}
+.primary-header.header-style-logo-text .branding h2 {
+  margin-top: 2px !important;
+}
+
+/* 5. Mobile: smaller logo on narrow screens */
+@media (max-width: 967px) {
+  .primary-header.header-style-logo-text .branding .logo img {
+    height: 58px;
+  }
 }
 
 /* ── Navigation ─────────────────────────────── */
